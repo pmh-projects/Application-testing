@@ -181,48 +181,6 @@ class Test(unittest.TestCase):
         mock.builtins.input = lambda _: "35"
         assert_equal(sixth(a, b, c, d, e), 35)
 
-# Test błędnego przypisania do wartosci
-# @patch('sys.stdout', new_callable=io.StringIO)
-# def testFirstErr(mock_stdout):
-#     mock.builtins.input = lambda _: "test"
-#     first()
-#     assert mock_stdout.getvalue() == "1\n"
-
-# def testSecondErr():
-#     a = 5
-#     mock.builtins.input = lambda _: "10"
-#     assert_equal(second(a), 10)
-#
-# def testThirdErr():
-#     a = 5
-#     b = 10
-#     mock.builtins.input = lambda _: "15"
-#     assert_equal(third(a, b), 15)
-#
-# def testFourthErr():
-#     a = 5
-#     b = 10
-#     c = 17
-#     mock.builtins.input = lambda _: 25
-#     assert_equal(fourth(a, b, c), 25)
-#
-# def testFifthErr():
-#     a = 5
-#     b = 10
-#     c = 17
-#     d = 25
-#     mock.builtins.input = lambda _: "32"
-#     assert_equal(fifth(a, b, c, d), 32)
-#
-# def testSixthErr():
-#     a = 5
-#     b = 10
-#     c = 17
-#     d = 25
-#     e = 32
-#     mock.builtins.input = lambda _: "35"
-#     assert_equal(sixth(a, b, c, d, e), 35)
-
 if __name__ == "__main__":
 
     a = first()
