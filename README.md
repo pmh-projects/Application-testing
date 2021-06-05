@@ -11,7 +11,7 @@
 Funkcja wyszukująca, odczytująca i zapisująca do pliku hasło z bazy Wikipedii.
 Możliwość wyboru ilości zdań do przeczytania i zapisu. Możliwość wyboru tytułu
 
-Przykładowe testy jednostkowy:
+Przykładowe testy jednostkowe:
 ```
     # Test podanego hasła
     def testWhatWiki(self):
@@ -40,6 +40,7 @@ Przykładowe testy jednostkowy:
 
 Funkcja tworząca notatkę wraz z możliwością nadania tytułu.
 
+Przykładowe testy jednostkowe:
 ```
      # Sprawdza czy w funkcji podano nazwę (Rózną od 0). Test na zwykłą nazwe bez liczby
     def testTitleIfNotZero(self):
@@ -70,7 +71,7 @@ Funkcja tworząca notatkę wraz z możliwością nadania tytułu.
 
 Funkcja umożliwiająca otwarcie notatki po wskazaniu tytułu.
 
-Przykładowe testy jednostkowy:
+Przykładowe testy jednostkowe:
 ```
     # Test otwarcia istniejącego pliku
     def testOpenFileExists(self):
@@ -93,7 +94,7 @@ Przykładowe testy jednostkowy:
 
 Symulator lotto umożliwający wybór 6 wskazanych liczb.
 
-Przykładowe testy jednostkowy:
+Przykładowe testy jednostkowe:
 ```
     # Test przypisania wartości to liczby
     def testFirst(self):
@@ -114,7 +115,7 @@ Przykładowe testy jednostkowy:
 
 Prosty kalkulator umożliwiający wykonie jedno z działaniń: dodawanie, odejmowanie, mnożenie, dzielenie.
 
-Przykładowe testy jednostkowy:
+Przykładowe testy jednostkowe:
 ```
     def testMnozenie(self):
 
