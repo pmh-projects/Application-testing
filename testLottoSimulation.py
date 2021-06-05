@@ -1,15 +1,15 @@
 import random
 import sys
+import io
+import pytest
 import unittest
 import mock
-import sys
 from nose.tools import *
 from unittest import mock
 from unittest.mock import patch
-from mock import patch
-import io
-import pytest
 from mock import *
+from mock import patch
+
 
 def first():
     check_var0 = isinstance('a', int)
