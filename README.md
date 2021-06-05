@@ -54,6 +54,9 @@ class Test(unittest.TestCase):
 <p align="center">
 <img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/wikiTest.png">
 </p>
+<p align="center">
+<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/testWiki3.png">
+</p>
 
 ## Notatka
 
@@ -98,6 +101,9 @@ Przykładowe testy jednostkowe:
 <p align="center">
 <img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/notatkaTest.png">
 </p>
+<p align="center">
+<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/notatkaTest2.png">
+</p>
 
 ## Otwórz notatkę
 
@@ -121,6 +127,9 @@ Przykładowe testy jednostkowe:
 <p align="center">
 <img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/openTest.png">
 </p>
+<p align="center">
+<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/openTest2.png">
+</p>
 
 ## Lotto Symulator
 
@@ -141,6 +150,9 @@ Przykładowe testy jednostkowe:
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/lottoSimTest.png">
+</p>
+<p align="center">
+<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/testLotto2.png">
 </p>
 
 ## Calc
@@ -175,6 +187,9 @@ Przykładowe testy jednostkowe:
 <p align="center">
 <img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/calcTest.png">
 </p>
+<p align="center">
+<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/calcTest2.png">
+</p>
 
 ## Wyszukiwarka
 
@@ -198,7 +213,7 @@ Przykładowe testy jednostkowe:
 <img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/searchTest.png">
 </p>
 <p align="center">
-<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/searchTest2.png">
+<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/testGS.png">
 </p>
 
 ## Screenshot
@@ -217,6 +232,9 @@ Przykładowe testy jednostkowe:
 ```
 <p align="center">
 <img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/screenTest.png">
+</p>
+<p align="center">
+<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/testSHT.png">
 </p>
 
 ## Pogoda
@@ -251,4 +269,7 @@ Przykładowe testy jednostkowe:
 ```
 <p align="center">
 <img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/weatherTest.png">
+</p>
+<p align="center">
+<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/tesWeather2.png">
 </p>
