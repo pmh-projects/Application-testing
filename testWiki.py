@@ -2,12 +2,12 @@ import wikipedia
 import unittest
 import mock
 import sys
+import io
+import pytest
 from nose.tools import *
 from unittest import mock
 from unittest.mock import patch
 from mock import patch
-import io
-import pytest
 
 def whatWiki():
     varwiki = input("Podaj hasło:\n")
