@@ -173,3 +173,6 @@ Przykładowe testy jednostkowe:
 <p align="center">
 <img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/searchTest.png">
 </p>
+<p align="center">
+<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/searchTest2.png">
+</p>
