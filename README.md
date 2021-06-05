@@ -6,6 +6,8 @@
 * [Lotto](#lotto-symulator)
 * [Calc](#calc)
 * [Wyszukiwarka](#wyszukiwarka)
+* [Screenshot](#screenshot)
+* [Pogoda](#pogoda)
 
 ## Info
 
@@ -175,4 +177,56 @@ Przykładowe testy jednostkowe:
 </p>
 <p align="center">
 <img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/searchTest2.png">
+</p>
+
+## Screenshot
+
+Funkcja umożliwiająca zrobienie screenshotu oraz nadanie tytułu dla pliku.
+
+Przykładowe testy jednostkowe:
+```
+    def testSceen(self):
+        mock.builtins.input = lambda _: "Testowy tytuł"
+        self.assertEqual(screenshot(), "Zapisano screenshot")
+
+    def testSceenEmpty(self):
+        mock.builtins.input = lambda _: ""
+        self.assertEqual(screenshot(), "Brak tytułu.")
+```
+<p align="center">
+<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/screenTest.png">
+</p>
+
+## Pogoda
+
+Funkcja umożliwiająca sprawdzenie pogody dla lokalizacji w Polsce.
+
+Przykładowe testy jednostkowe:
+```
+    # Test polskiego miasta
+    def testWeather(self):
+
+        mock.builtins.input = lambda _: "Sopot"
+        self.assertEqual(weather(), 0)
+	
+    # Przypadek braku miasta
+    def testWeatherEmpty(self):
+
+        mock.builtins.input = lambda _: ""
+        self.assertEqual(weather(), "Brak miasta")
+
+    # Przypadek podania przypadkowego zlepku liter
+    def testWeatherErr(self):
+
+        mock.builtins.input = lambda _: "Xyz"
+        self.assertEqual(weather(), 99)	
+        # Przypadek podania miasta z poza obszaru
+	
+    def testWeatherOut(self):
+
+        mock.builtins.input = lambda _: "Saloniki"
+        self.assertEqual(weather(), 99)	
+```
+<p align="center">
+<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/weatherTest.png">
 </p>
