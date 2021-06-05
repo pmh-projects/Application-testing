@@ -4,11 +4,11 @@ import math
 import sys
 import io
 import pytest
-from nose.tools import *
+import mock
 import unittest
+from nose.tools import *
 from unittest import mock
 from unittest.mock import patch
-import mock
 from mock import patch
 
 def liczba0():
