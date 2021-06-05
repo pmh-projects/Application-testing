@@ -50,24 +50,24 @@ Funkcja tworząca notatkę wraz z możliwością nadania tytułu.
 
 Przykładowe testy jednostkowe:
 ```
-     # Sprawdza czy w funkcji podano nazwę (Rózną od 0). Test na zwykłą nazwe bez liczby
+    # Sprawdza czy w funkcji podano nazwe (Rozne od 0). Test na zwykla nazwe bez liczby
     def testTitleIfNotZero(self):
 
         mock.builtins.input = lambda _: "Testowy tytul"
-        assert_equal(save_to_file_title(), "Testowy tytul")
+        self.assertEqual(save_to_file_title(), "Testowy tytul")
         
-    # Test na zbyt długi tytuł. 
+    # Test zbyt dlugiego tytulu
     def testTitleIfTooLong(self):
 
         mock.builtins.input = lambda _: "Zbyt Dlugi Tytul do testow maksymalna liczba znaków to dwadzieścia pięć"
-        assert_equal(save_to_file_title(), 5)  
+        self.assertEqual(save_to_file_title(), 5)
         
-    # Test zapisu do notatki z TESTowym tytulem zadeklarowanym w tesci
+    # Test wpisu do notatki z TESTowym tytulem zadeklarowanym w tesci
     def testContentPositive(self):
 
         tytul="TEST"
         mock.builtins.input = lambda _: "Testowy wpis do notatki"
-        assert_equal(save_to_file_content(tytul), "Plik został zapisany.")    
+        self.assertEqual(save_to_file_content(tytul), "Plik został zapisany.")
         
 ```
 
@@ -81,17 +81,17 @@ Funkcja umożliwiająca otwarcie notatki po wskazaniu tytułu.
 
 Przykładowe testy jednostkowe:
 ```
-    # Test otwarcia istniejącego pliku
+
     def testOpenFileExists(self):
 
         mock.builtins.input = lambda _: "TEST_PLIK"
-        assert_equal(open_from_file(), "ok")
+        self.assertEqual(open_from_file(), "ok")
 
-    # Test otwarcia nie istniejącego pliku
     def testOpenFileNotExists(self):
 
         mock.builtins.input = lambda _: "TEST_PLIK_NOT_EXIST"
-        assert_equal(open_from_file(), "Błąd")
+        self.assertEqual(open_from_file(), "Błąd")
+	
 ```
 
 <p align="center">
