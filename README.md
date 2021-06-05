@@ -4,6 +4,7 @@
 * [Otwórz notatkę](#otwórz-notatkę)
 * [Lotto](#lotto-symulator)
 * [Calc](#calc)
+* [Info](#info)
 
 ## Wiki
 
@@ -31,6 +32,10 @@ Przykładowe testy jednostkowy:
 
 ```
 	
+<p align="center">
+<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/wikiTest.png">
+</p>
+
 ## Notatka
 
 Funkcja tworząca notatkę wraz z możliwością nadania tytułu.
@@ -57,6 +62,10 @@ Funkcja tworząca notatkę wraz z możliwością nadania tytułu.
         
 ```
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/notatkaTest.png">
+</p>
+
 ## Otwórz notatkę
 
 Funkcja umożliwiająca otwarcie notatki po wskazaniu tytułu.
@@ -76,6 +85,10 @@ Przykładowe testy jednostkowy:
         assert_equal(open_from_file(), "Błąd")
 ```
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/openTest.png">
+</p>
+
 ## Lotto Symulator
 
 Symulator lotto umożliwający wybór 6 wskazanych liczb.
@@ -92,6 +105,10 @@ Przykładowe testy jednostkowy:
         mock.builtins.input = lambda _: "10"
         self.assertEqual(second(a), 10)
 ```
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/lottoSimTest.png">
+</p>
 
 ## Calc
 
@@ -121,3 +138,11 @@ Przykładowe testy jednostkowy:
         mock.builtins.input = lambda _: "0"
         assert_equal(calculator(x, y), "Wyjscie")
 ```        
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/calcTest.png">
+</p>
+
+## Info
+
+Reszta (kod funkcji oraz testów) z komentarzem w plikach.
