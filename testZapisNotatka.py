@@ -1,12 +1,11 @@
 import sys
+import io
+import pytest
+import unittest
 from nose.tools import *
 from unittest import mock
 from unittest.mock import patch
 from mock import patch
-import io
-import pytest
-import unittest
-
 
 def save_to_file_title():
         print("Wpisz nazwe tytulu lub 0, aby wyjsc")
