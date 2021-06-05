@@ -5,10 +5,11 @@
 * [Otwórz notatkę](#otwórz-notatkę)
 * [Lotto](#lotto-symulator)
 * [Calc](#calc)
+* [Wyszukiwarka](#wyszukiwarka)
 
 ## Info
 
-Aplikacja została podzielona na kilka plików. Funkcje została wyodrębniona na potrzeby testów.
+Testowanie aplikacji asystenta, która została podzielona na kilka plików. Funkcje zostały wyodrębnione na potrzeby testów.
 Przy testowaniu użyto głównie modułów <b>unittest, pytest, mock</b>.
 <br>
 Kod funkcji oraz testów z komentarzem w plikach.
@@ -55,7 +56,7 @@ Przykładowe testy jednostkowe:
         mock.builtins.input = lambda _: "Testowy tytul"
         assert_equal(save_to_file_title(), "Testowy tytul")
         
-    # Test na zbyt długi tytuł
+    # Test na zbyt długi tytuł. 
     def testTitleIfTooLong(self):
 
         mock.builtins.input = lambda _: "Zbyt Dlugi Tytul do testow maksymalna liczba znaków to dwadzieścia pięć"
@@ -151,3 +152,24 @@ Przykładowe testy jednostkowe:
 <img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/calcTest.png">
 </p>
 
+## Wyszukiwarka
+
+Funkcja umożliwiająca wpisanie hasła i wyszukanie w wyszukiwarce.
+
+Przykładowe testy jednostkowe:
+```    
+    # Test wpisania hasła do wyszukawania.
+    def testSearch(self):
+        mock.builtins.input = lambda _: "Testowanie"
+        self.assertEqual(searchTerm(), "Znaleziono")
+
+    # Test pominięcia wpisania hasła do wyszukawania.
+    def testSearchNoValue(self):
+        mock.builtins.input = lambda _: ""
+        self.assertEqual(searchTerm(), "Brak hasła")
+
+```    
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/searchTest.png">
+</p>
