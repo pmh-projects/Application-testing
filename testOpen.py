@@ -1,9 +1,9 @@
+import pytest
+import unittest
 from nose.tools import *
 from unittest import mock
 from unittest.mock import patch
 from mock import patch
-import pytest
-import unittest
 
 def open_from_file():
 
