@@ -1,6 +1,4 @@
 import wikipedia
-# jego moduł implementuje generatory liczb pseudolosowych dla różnych dystrybucji.
-# https://docs.python.org/3/library/random.html
 import unittest
 import mock
 import sys
