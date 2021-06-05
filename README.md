@@ -1,10 +1,17 @@
 ## Testowanie aplikacji
+* [Info](#info)
 * [Wiki](#wiki)
 * [Notatka](#notatka)
 * [Otwórz notatkę](#otwórz-notatkę)
 * [Lotto](#lotto-symulator)
 * [Calc](#calc)
-* [Info](#info)
+
+## Info
+
+Aplikacja została podzielona na kilka plików. Funkcje została wyodrębniona na potrzeby testów.
+Przy testowaniu użyto głównie modułów <b>unittest, pytest, mock</b>.
+<br>
+Reszta (kod funkcji oraz testów) z komentarzem w plikach.
 
 ## Wiki
 
@@ -144,9 +151,3 @@ Przykładowe testy jednostkowe:
 <img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/calcTest.png">
 </p>
 
-## Info
-
-Aplikacja została podzielona na kilka plików. Funkcje została wyodrębniona na potrzeby testów.
-Przy testowaniu użyto głównie modułów <b>unittest, pytest, mock</b>.
-<br>
-Reszta (kod funkcji oraz testów) z komentarzem w plikach.
