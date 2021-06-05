@@ -33,7 +33,14 @@ Przykładowe testy jednostkowe:
     def testWikiSearch(varwiki, number):
         varwiki = "Testowanie"
         number = 2
-        assert "ok" == wikipedia_search(varwiki, number)   
+        assert "ok" == wikipedia_search(varwiki, number)
+
+    # Test sprawdzający wyjątek braku podanego hasła
+    @patch('sys.stdout', new_callable=io.StringIO)
+    def testWikiSearchErr(varwiki, number):
+        # varwiki = "Testowanie"
+        number = 5
+        assert "nook" == wikipedia_search(varwiki, number)
         
     # Test sprawdzający input pytania "Czy zapisać plik" - tak
     def testSaveViki(self):
@@ -57,13 +64,26 @@ Przykładowe testy jednostkowe:
 
         mock.builtins.input = lambda _: "Testowy tytul"
         self.assertEqual(save_to_file_title(), "Testowy tytul")
-        
+    
+    # Test funkcji w wypadku podania braku tytulu
+    def testTitleIfEmpty(self):
+
+        mock.builtins.input = lambda _: ""
+        self.assertEqual(save_to_file_title(), "Brak tytulu")
+	
     # Test zbyt dlugiego tytulu
     def testTitleIfTooLong(self):
 
         mock.builtins.input = lambda _: "Zbyt Dlugi Tytul do testow maksymalna liczba znaków to dwadzieścia pięć"
         self.assertEqual(save_to_file_title(), 5)
-        
+	
+    # Test wpisu do notatki z TESTowym tytulem zadeklarowanym w tesci
+    def testContentShort(self):
+
+        tytul="TEST2"
+        mock.builtins.input = lambda _: "test"
+        self.assertEqual(save_to_file_content(tytul), "Notatka zbyt krotka")
+	
     # Test wpisu do notatki z TESTowym tytulem zadeklarowanym w tesci
     def testContentPositive(self):
 
