@@ -240,8 +240,8 @@ Przykładowe testy jednostkowe:
 
         mock.builtins.input = lambda _: "Xyz"
         self.assertEqual(weather(), 99)	
-        # Przypadek podania miasta z poza obszaru
 	
+    # Przypadek podania miasta z poza obszaru
     def testWeatherOut(self):
 
         mock.builtins.input = lambda _: "Saloniki"
