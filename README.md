@@ -146,4 +146,7 @@ Przykładowe testy jednostkowe:
 
 ## Info
 
+Aplikacja została podzielona na kilka plików. Funkcje została wyodrębniona na potrzeby testów.
+Przy testowaniu użyto głównie modułów <b>unittest, pytest, mock</b>.
+<br>
 Reszta (kod funkcji oraz testów) z komentarzem w plikach.
