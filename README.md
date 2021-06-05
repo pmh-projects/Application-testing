@@ -23,6 +23,8 @@ Możliwość wyboru ilości zdań do przeczytania i zapisu. Możliwość wyboru 
 
 Przykładowe testy jednostkowe:
 ```
+class Test(unittest.TestCase):
+
     # Test podanego hasła
     def testWhatWiki(self):
         mock.builtins.input = lambda _: "testowanie"
