@@ -94,7 +94,7 @@ Przykładowe testy jednostkowe:
         mock.builtins.input = lambda _: "Zbyt Dlugi Tytul do testow maksymalna liczba znaków to dwadzieścia pięć"
         self.assertEqual(save_to_file_title(), 5)
 	
-    # Test wpisu do notatki z TESTowym tytulem zadeklarowanym w tesci
+    # Test wpisu do notatki z TESTowym krótkim tytulem zadeklarowanym w tesci
     def testContentShort(self):
 
         tytul="TEST2"
