@@ -45,17 +45,25 @@ class Test(unittest.TestCase):
         assert "nook" == wikipedia_search(varwiki, number)
         
     # Test sprawdzający input pytania "Czy zapisać plik" - tak
-    def testSaveViki(self):
+    def testSaveViki(wikifound):
+        wikifound = "Przykladowy tekst"
         mock.builtins.input = lambda _: "tak"
-        self.assertNotEqual(saveWiki(wikifound), "ok")    
+        assert_equal(saveWiki(wikifound), "ok")
+	
+    # Test na zbyt długi tytuł
+    def testWikiSaveToFile(wikifound):
+        wikifound = "Przykladowy tekst znaleziony dla funkcji wikiSaveToFile"
+        mock.builtins.input = lambda _: "TestowanieJestOkExtra"
+        assert_equal(wikiSaveToFile(wikifound), "ok")	
+
 
 ```
 	
 <p align="center">
-<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/wikiTest.png">
+<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/testWikiNew0.png">
 </p>
 <p align="center">
-<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/testWiki3.png">
+<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/testWikiNew.png">
 </p>
 
 ## Notatka
