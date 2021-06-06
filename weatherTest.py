@@ -30,7 +30,7 @@ def weather():
 
             config_dict = get_default_config()
             config_dict['language'] = 'pl'
-            owm = pyowm.OWM('74940aca9b5a0b8e0ca18806718b52b3', config_dict)
+            owm = pyowm.OWM('klucz_API', config_dict)
             mng = owm.weather_manager()
             obs = mng.weather_at_place(check_city + ', PL')
             w = obs.weather
