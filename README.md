@@ -189,7 +189,7 @@ Przykładowe testy jednostkowe:
 
 ## Calc
 
-Prosty kalkulator umożliwiający wykonie jedno z działaniń: dodawanie, odejmowanie, mnożenie, dzielenie.
+Prosty kalkulator umożliwiający wykonie jednego z działań: dodawanie, odejmowanie, mnożenie, dzielenie.
 
 Przykładowe testy jednostkowe:
 ```
