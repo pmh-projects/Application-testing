@@ -158,13 +158,33 @@ Przykładowe testy jednostkowe:
         a = 5
         mock.builtins.input = lambda _: "10"
         self.assertEqual(second(a), 10)
+	
+    def testSixth(self):
+        a = 5
+        b = 10
+        c = 15
+        d = 25
+        f = 32
+        mock.builtins.input = lambda _: "35"
+        self.assertEqual(sixth(a, b, c, d, f), 35)
+	
+    @patch('builtins.input', side_effect=[7, 12, 17, 19, 34, 42])
+    def test_using_side_effect(self, mock_input):
+        num_1 = mock_input()
+        num_2 = mock_input()
+        num_3 = mock_input()
+        num_4 = mock_input()
+        num_5 = mock_input()
+        num_6 = mock_input()
+        assert_equal(lotto_draw(num_1, num_2, num_3, num_4, num_5, num_6), 'ok')
+	
 ```
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/lottoSimTest.png">
+<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/lottoNew.png">
 </p>
 <p align="center">
-<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/testLotto2.png">
+<img src="https://raw.githubusercontent.com/pmh-projects/tests/main/img/lottoNew1.png">
 </p>
 
 ## Calc
