@@ -100,44 +100,50 @@ def sixth(a, b, c, d, f):
 
 def lotto_draw(a, b, c, d, f, g):
 
-        given_numbers = [a, b, c, d, f, g]
+    try:
 
-        lotto_draw = []
-        i = 0
+            given_numbers = [a, b, c, d, f, g]
 
-        while i < 6:
-            r = random.randint(1, 49)
-            if lotto_draw.count(r) == 0:
-                lotto_draw.append(r)
-                i += 1
-        hit_numbers = []
+            lotto_draw = []
+            i = 0
 
-        for x in lotto_draw:
-            y = len(given_numbers)
-            t = 0
-            while t < y:
-                z = given_numbers[t]
-                if x == z:
-                    hit_numbers.append(z)
-                t = t + 1
+            while i < 6:
+                r = random.randint(1, 49)
+                if lotto_draw.count(r) == 0:
+                    lotto_draw.append(r)
+                    i += 1
+            hit_numbers = []
 
-        print("Wybrane Liczby: ")
-        given_numbers.sort()
-        print(given_numbers)
-        lotto_draw.sort()
-        print("Wylosowane Liczby: ")
-        print(lotto_draw)
-        print("Trafione liczby: ")
-        hit_numbers.sort()
+            for x in lotto_draw:
+                y = len(given_numbers)
+                t = 0
+                while t < y:
+                    z = given_numbers[t]
+                    if x == z:
+                        hit_numbers.append(z)
+                    t = t + 1
 
-        if not hit_numbers:
-            print("Brak.")
-            return ("no")
-        else:
-            print(hit_numbers)
-            return ("ok")
+            print("Wybrane Liczby: ")
+            given_numbers.sort()
+            print(given_numbers)
+            lotto_draw.sort()
+            print("Wylosowane Liczby: ")
+            print(lotto_draw)
+            print("Trafione liczby: ")
+            hit_numbers.sort()
 
+            if not hit_numbers:
+                print("Brak.")
+                return ("ok")
+            else:
+                print(hit_numbers)
+                return ("ok")
 
+    except Exception as e:
+
+        print(e)
+        return 99
+    
 class Test(unittest.TestCase):
 
     # Test przypisania wartości to liczby
@@ -179,7 +185,28 @@ class Test(unittest.TestCase):
         f = 32
         mock.builtins.input = lambda _: "35"
         self.assertEqual(sixth(a, b, c, d, f), 35)
+        
+    # Test głównej funkcji losującej   
+    @patch('builtins.input', side_effect=[7, 12, 17, 19, 34, 42])
+    def test_using_side_effect(self, mock_input):
+        num_1 = mock_input()
+        num_2 = mock_input()
+        num_3 = mock_input()
+        num_4 = mock_input()
+        num_5 = mock_input()
+        num_6 = mock_input()
+        assert_equal(lotto_draw(num_1, num_2, num_3, num_4, num_5, num_6), 'ok')
 
+    @patch('builtins.input', side_effect=[7, 12, 17, 'x', 'y', 42])
+    def test_using_side_effect(self, mock_input):
+        num_1 = mock_input()
+        num_2 = mock_input()
+        num_3 = mock_input()
+        num_4 = mock_input()
+        num_5 = mock_input()
+        num_6 = mock_input()
+        assert_equal(lotto_draw(num_1, num_2, num_3, num_4, num_5, num_6), 99)
+        
 if __name__ == "__main__":
 
     a = first()
