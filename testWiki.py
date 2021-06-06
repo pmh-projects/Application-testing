@@ -104,22 +104,35 @@ class Test(unittest.TestCase):
         number = 5
         assert "nook" == wikipedia_search(varwiki, number)
     # Test sprawdzający input pytania "Czy zapisać plik" - tak
-    def testSaveViki(self):
-        mock.builtins.input = lambda _: "tak"
-        self.assertNotEqual(saveWiki(wikifound), "ok")
-    # Test sprawdzający input pytania "Czy zapisać plik" - nie
+    # Test sprawdzający input pytania "Czy zapisać plik" - tak
     def testSaveViki(wikifound):
+        wikifound = "Przykladowy tekst"
+        mock.builtins.input = lambda _: "tak"
+        assert_equal(saveWiki(wikifound), "ok")
+
+    # Test sprawdzający input pytania "Czy zapisać plik" - nie
+    def testSaveViki2(wikifound):
+        wikifound = "Przykladowy tekst2"
         mock.builtins.input = lambda _: "nie"
         assert_equal(saveWiki(wikifound), "nieOk")
+
     # inne..
-    def testSaveViki(wikifound):
+    def testSaveViki3(wikifound):
+        wikifound = "Przykladowy tekst3"
         mock.builtins.input = lambda _: "123"
         assert_equal(saveWiki(wikifound), "nieOk")
 
+    # Test zapisu
     def testWikiSaveToFile(wikifound):
         wikifound = "Przykladowy tekst znaleziony dla funkcji wikiSaveToFile"
         mock.builtins.input = lambda _: "TestowanieJestOkExtra"
         assert_equal(wikiSaveToFile(wikifound), "ok")
+
+    # Test zapisu
+    def testWikiSaveToFile2(wikifound):
+        wikifound = "Przykladowy tekst znaleziony dla funkcji wikiSaveToFile"
+        mock.builtins.input = lambda _: ""
+        assert_equal(wikiSaveToFile(wikifound), "no")
 
 
 if __name__ == "__main__":
