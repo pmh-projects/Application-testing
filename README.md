@@ -50,13 +50,17 @@ class Test(unittest.TestCase):
         mock.builtins.input = lambda _: "tak"
         assert_equal(saveWiki(wikifound), "ok")
 	
-    # Test na zbyt długi tytuł
+    # Test zapisu
     def testWikiSaveToFile(wikifound):
         wikifound = "Przykladowy tekst znaleziony dla funkcji wikiSaveToFile"
         mock.builtins.input = lambda _: "TestowanieJestOkExtra"
         assert_equal(wikiSaveToFile(wikifound), "ok")	
 
-
+    # Test zapisu
+    def testWikiSaveToFile2(wikifound):
+        wikifound = "Przykladowy tekst znaleziony dla funkcji wikiSaveToFile"
+        mock.builtins.input = lambda _: ""
+        assert_equal(wikiSaveToFile(wikifound), "no")
 ```
 	
 <p align="center">
